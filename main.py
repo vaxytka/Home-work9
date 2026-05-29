@@ -15,7 +15,7 @@ class Player:
         self.name = name
         self.money = 150
         self.hp = 100
-        self.inventory = []  # список тваринок
+        self.inventory = []
 
     def go_work(self):
         salary = randint(30, 60)
@@ -65,7 +65,7 @@ def buy_handler():
         new_pet = Pet(choice(pet_types))
         me.inventory.append(new_pet)
 
-        if randint(1, 4) == 1:  # 25% шанс що вкусить
+        if randint(1, 4) == 1:
             me.hp -= 10
             update_gui(new_pet.get_angry())
         else:
